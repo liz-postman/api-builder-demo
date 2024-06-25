@@ -25,12 +25,12 @@
 							}
 						],
 						"url": {
-							"raw": "{{baseUrl}}/breeeeeds?limit=<long>",
+							"raw": "{{baseUrl}}/breeds?limit=<long>",
 							"host": [
 								"{{baseUrl}}"
 							],
 							"path": [
-								"breeeeeds"
+								"breeds"
 							],
 							"query": [
 								{
