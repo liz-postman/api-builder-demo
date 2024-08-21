@@ -1,0 +1,35 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique identifier for the user"
+    },
+    "username": {
+      "type": "string",
+      "description": "The user's username"
+    },
+    "email": {
+      "type": "string",
+      "format": "email",
+      "description": "The user's email address"
+    },
+    "age": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "The user's age"
+    },
+    "isActive": {
+      "type": "boolean",
+      "description": "Indicates whether the user is active"
+    },
+    "createdAt": {
+      "type": "string",
+      "format": "date-time",
+      "description": "The date and time when the user was created"
+    }
+  },
+  "required": ["id", "username", "email"],
+  "additionalProperties": false
+}
