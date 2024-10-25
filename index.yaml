@@ -16,6 +16,43 @@ servers:
   - url: https://catfact.ninja
     description: prodasdsadasdasd
 paths:
+  /breeds_dup:
+    get:
+      summary: Returns a list of breeds
+      tags: 
+        - Breeds
+      description: Returns a list of breeds
+      operationId: getBreeds
+      parameters:
+        - name: limit
+          in: query
+          description: This is a description
+          required: false
+          example: 10
+          schema:
+            type: integer
+            format: int64
+      responses:
+        '200':
+          description: Normal operation
+          content:
+            application/json:
+              example: success
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Breed'
+                $ref: '#/components/schemas/Breed'
+        '500':
+          description: Server exception
+          content:
+            application/json:
+              example: unsuccessful
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Breed'
+                $ref: '#/components/schemas/Breed'  
   /breeds:
     get:
       summary: Returns a list of breeds
