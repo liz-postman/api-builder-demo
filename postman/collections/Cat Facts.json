@@ -1,10 +1,10 @@
 {
 	"info": {
-		"_postman_id": "59824184-9573-41af-b3e0-ee5208d1b568",
+		"_postman_id": "de02533a-6bf6-4dbd-bc42-51ff1601aadc",
 		"name": "Cat Facts",
 		"description": "Contact Support:\n Name: Liz Fedak\n Email: admin@admin.com",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_uid": "34453735-59824184-9573-41af-b3e0-ee5208d1b568"
+		"_uid": "34453735-de02533a-6bf6-4dbd-bc42-51ff1601aadc"
 	},
 	"item": [
 		{
@@ -12,7 +12,7 @@
 			"item": [
 				{
 					"name": "Returns a list of breeds",
-					"id": "75bc732e-36d5-4e3d-b7a4-9f3bb3a83e05",
+					"id": "fc61c56f-570d-4b12-9d6e-3b1316f5f916",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -44,7 +44,7 @@
 					},
 					"response": [
 						{
-							"id": "bfea7889-1112-471b-8394-49b8f67c3c05",
+							"id": "e0c89bf4-4b72-40d7-8d8c-5b048dd4b087",
 							"name": "Normal operation",
 							"originalRequest": {
 								"method": "GET",
@@ -90,7 +90,7 @@
 							"body": "{\n\t\"breed\": \"<string>\",\n\t\"country\": \"<string>\",\n\t\"origin\": \"<string>\",\n\t\"coat\": \"<string>\",\n\t\"pattern\": \"<string>\"\n}"
 						},
 						{
-							"id": "ab3d57c4-8547-4151-8f6e-cea7741885b2",
+							"id": "3d30732b-b987-425d-8955-e1a41ba28856",
 							"name": "Server exception",
 							"originalRequest": {
 								"method": "GET",
@@ -138,14 +138,14 @@
 					]
 				}
 			],
-			"id": "13312184-b799-43c1-b91b-94fcfb3bc856"
+			"id": "7570b250-21d1-4736-a4a2-79e9a28bd8f6"
 		},
 		{
 			"name": "fact",
 			"item": [
 				{
 					"name": "Returns a random fact",
-					"id": "a10d851b-d191-4240-a7e8-6180275ce71d",
+					"id": "d4c5bba2-e675-49ff-aeb4-351ee1cac885",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -177,7 +177,7 @@
 					},
 					"response": [
 						{
-							"id": "e444a18d-66b1-4869-80f6-fba9eff56944",
+							"id": "72b44f17-a3fa-4cb4-a255-38999f16cc26",
 							"name": "Normal response",
 							"originalRequest": {
 								"method": "GET",
@@ -223,7 +223,7 @@
 							"body": "{\n\t\"example\": {\n\t\t\"fact\": \"A cat's normal pulse is 140-240 beats per minute, with an average of 195.\"\n\t}\n}"
 						},
 						{
-							"id": "25b4082d-7c03-4fa4-bcd8-8a9217b42d2b",
+							"id": "daba99d9-0443-4ce0-a8eb-f5412f5da7d9",
 							"name": "Fact not found",
 							"originalRequest": {
 								"method": "GET",
@@ -259,7 +259,7 @@
 							"cookie": []
 						},
 						{
-							"id": "671efadc-dfae-403f-a7f9-925a3e0d4a4f",
+							"id": "b0fee259-e8d1-41f4-879d-71a5f8424bd8",
 							"name": "Normal response",
 							"originalRequest": {
 								"method": "GET",
@@ -307,14 +307,14 @@
 					]
 				}
 			],
-			"id": "688a07e6-3b03-4b70-bdc4-ffefee748c69"
+			"id": "02141030-ea9b-4dca-b153-eda425abc569"
 		},
 		{
 			"name": "facts",
 			"item": [
 				{
 					"name": "Get a list of facts",
-					"id": "de6221c7-56c0-4b00-9eb4-c8984717668b",
+					"id": "f4d849bd-0507-4500-86bd-85e3b2fec9d0",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -351,7 +351,7 @@
 					},
 					"response": [
 						{
-							"id": "b60d1982-e02b-44d9-ba58-e5f3626e1cf5",
+							"id": "e210ef1d-d602-4a0c-8c03-42bc0abc8292",
 							"name": "successful operation",
 							"originalRequest": {
 								"method": "GET",
@@ -402,7 +402,7 @@
 							"body": "{\n\t\"fact\": \"<string>\",\n\t\"length\": \"<integer>\"\n}"
 						},
 						{
-							"id": "db15d6bf-253f-4e58-95b8-2ac34b0d3649",
+							"id": "34deeb8e-08b9-4c9d-ad3a-a984630ef741",
 							"name": "successful operation",
 							"originalRequest": {
 								"method": "GET",
@@ -455,7 +455,7 @@
 					]
 				}
 			],
-			"id": "cca95e16-27e5-4eda-a079-ab6b807e65ab"
+			"id": "f5d04ef0-1623-4db8-9bce-50f7ff8122e7"
 		}
 	],
 	"auth": {
