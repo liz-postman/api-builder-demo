@@ -1,10 +1,10 @@
 {
 	"info": {
-		"_postman_id": "5f3d93fd-9d7d-48dc-b61f-fd44bb96d164",
+		"_postman_id": "59824184-9573-41af-b3e0-ee5208d1b568",
 		"name": "Cat Facts",
 		"description": "Contact Support:\n Name: Liz Fedak\n Email: admin@admin.com",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_uid": "34453735-5f3d93fd-9d7d-48dc-b61f-fd44bb96d164"
+		"_uid": "34453735-59824184-9573-41af-b3e0-ee5208d1b568"
 	},
 	"item": [
 		{
@@ -12,7 +12,7 @@
 			"item": [
 				{
 					"name": "Returns a list of breeds",
-					"id": "2a0be265-d9c8-409a-b6ef-612a70f75e14",
+					"id": "75bc732e-36d5-4e3d-b7a4-9f3bb3a83e05",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -44,7 +44,7 @@
 					},
 					"response": [
 						{
-							"id": "ecbbc151-a53b-4acd-b8fd-f02668a87f8b",
+							"id": "bfea7889-1112-471b-8394-49b8f67c3c05",
 							"name": "Normal operation",
 							"originalRequest": {
 								"method": "GET",
@@ -79,6 +79,7 @@
 							"status": "OK",
 							"code": 200,
 							"_postman_previewlanguage": "json",
+							"_postman_previewtype": "html",
 							"header": [
 								{
 									"key": "Content-Type",
@@ -89,7 +90,7 @@
 							"body": "{\n\t\"breed\": \"<string>\",\n\t\"country\": \"<string>\",\n\t\"origin\": \"<string>\",\n\t\"coat\": \"<string>\",\n\t\"pattern\": \"<string>\"\n}"
 						},
 						{
-							"id": "24b1fcf1-0f5f-4438-a98c-06b3d1032ec0",
+							"id": "ab3d57c4-8547-4151-8f6e-cea7741885b2",
 							"name": "Server exception",
 							"originalRequest": {
 								"method": "GET",
@@ -124,6 +125,7 @@
 							"status": "Internal Server Error",
 							"code": 500,
 							"_postman_previewlanguage": "json",
+							"_postman_previewtype": "html",
 							"header": [
 								{
 									"key": "Content-Type",
@@ -136,14 +138,14 @@
 					]
 				}
 			],
-			"id": "ac8c6c39-465b-45e7-8e11-5bd775487b22"
+			"id": "13312184-b799-43c1-b91b-94fcfb3bc856"
 		},
 		{
 			"name": "fact",
 			"item": [
 				{
 					"name": "Returns a random fact",
-					"id": "5c860b35-7a37-4010-9b3a-9d8685e92d82",
+					"id": "a10d851b-d191-4240-a7e8-6180275ce71d",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -175,7 +177,7 @@
 					},
 					"response": [
 						{
-							"id": "949c8450-1254-4388-8493-4def7f04a006",
+							"id": "e444a18d-66b1-4869-80f6-fba9eff56944",
 							"name": "Normal response",
 							"originalRequest": {
 								"method": "GET",
@@ -210,6 +212,7 @@
 							"status": "OK",
 							"code": 200,
 							"_postman_previewlanguage": "json",
+							"_postman_previewtype": "html",
 							"header": [
 								{
 									"key": "Content-Type",
@@ -220,7 +223,7 @@
 							"body": "{\n\t\"example\": {\n\t\t\"fact\": \"A cat's normal pulse is 140-240 beats per minute, with an average of 195.\"\n\t}\n}"
 						},
 						{
-							"id": "f10cac60-952d-4688-83ca-35fed5e0abaf",
+							"id": "25b4082d-7c03-4fa4-bcd8-8a9217b42d2b",
 							"name": "Fact not found",
 							"originalRequest": {
 								"method": "GET",
@@ -251,11 +254,12 @@
 							"status": "Not Found",
 							"code": 404,
 							"_postman_previewlanguage": "text",
+							"_postman_previewtype": "html",
 							"header": [],
 							"cookie": []
 						},
 						{
-							"id": "ec78898d-e3ae-4893-a7ef-40c573ecaf46",
+							"id": "671efadc-dfae-403f-a7f9-925a3e0d4a4f",
 							"name": "Normal response",
 							"originalRequest": {
 								"method": "GET",
@@ -290,6 +294,7 @@
 							"status": "Internal Server Error",
 							"code": 500,
 							"_postman_previewlanguage": "json",
+							"_postman_previewtype": "html",
 							"header": [
 								{
 									"key": "Content-Type",
@@ -302,14 +307,14 @@
 					]
 				}
 			],
-			"id": "220d4278-8ad5-4bdd-82b3-287f0360cbe7"
+			"id": "688a07e6-3b03-4b70-bdc4-ffefee748c69"
 		},
 		{
 			"name": "facts",
 			"item": [
 				{
 					"name": "Get a list of facts",
-					"id": "1054820a-0096-43ec-8ee9-3aa90651c6ae",
+					"id": "de6221c7-56c0-4b00-9eb4-c8984717668b",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -346,7 +351,7 @@
 					},
 					"response": [
 						{
-							"id": "0ceab37c-c96c-43b0-9a14-a169ef711d8f",
+							"id": "b60d1982-e02b-44d9-ba58-e5f3626e1cf5",
 							"name": "successful operation",
 							"originalRequest": {
 								"method": "GET",
@@ -386,6 +391,7 @@
 							"status": "OK",
 							"code": 200,
 							"_postman_previewlanguage": "json",
+							"_postman_previewtype": "html",
 							"header": [
 								{
 									"key": "Content-Type",
@@ -396,7 +402,7 @@
 							"body": "{\n\t\"fact\": \"<string>\",\n\t\"length\": \"<integer>\"\n}"
 						},
 						{
-							"id": "4a787b40-a6b4-44ee-8c95-91faf1435825",
+							"id": "db15d6bf-253f-4e58-95b8-2ac34b0d3649",
 							"name": "successful operation",
 							"originalRequest": {
 								"method": "GET",
@@ -436,6 +442,7 @@
 							"status": "Internal Server Error",
 							"code": 500,
 							"_postman_previewlanguage": "json",
+							"_postman_previewtype": "html",
 							"header": [
 								{
 									"key": "Content-Type",
@@ -448,7 +455,7 @@
 					]
 				}
 			],
-			"id": "29e6803a-df64-4fe7-9828-75dd21ad7ee5"
+			"id": "cca95e16-27e5-4eda-a079-ab6b807e65ab"
 		}
 	],
 	"auth": {
