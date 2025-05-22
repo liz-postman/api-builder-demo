@@ -12,6 +12,57 @@
 			"item": [
 				{
 					"name": "Returns a list of breeds",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "c651cce9-7aec-4282-9fca-2d040f2c228d",
+								"exec": [
+									"pm.test(\"Response status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"",
+									"pm.test(\"Response time is in an acceptable range\", function () {",
+									"  pm.expect(pm.response.responseTime).to.be.below(1000);",
+									"});",
+									"",
+									"",
+									"pm.test(\"Response has the required fields based on the schema\", function () {",
+									"    const responseData = pm.response.json();",
+									"    ",
+									"    pm.expect(responseData).to.be.an('object');",
+									"    pm.expect(responseData).to.have.property('breeds').that.is.an('array');",
+									"    responseData.breeds.forEach(function(breed) {",
+									"        pm.expect(breed).to.have.property('name').that.is.a('string');",
+									"        pm.expect(breed).to.have.property('size').that.is.a('string');",
+									"        pm.expect(breed).to.have.property('origin').that.is.a('string');",
+									"        pm.expect(breed).to.have.property('temperament').that.is.a('string');",
+									"    });",
+									"});",
+									"",
+									"",
+									"pm.test(\"Limit query parameter format is valid\", function () {",
+									"  pm.expect(pm.request.url.query).to.include(\"limit\");",
+									"  pm.expect(pm.request.url.query.get(\"limit\")).to.match(/^\\d+$/);",
+									"});",
+									"",
+									"",
+									"pm.test(\"Validate the presence of 'breeds' array and its length based on the limit query parameter value\", function () {",
+									"    const limit = pm.request.url.query.get('limit');",
+									"    const responseData = pm.response.json();",
+									"    ",
+									"    pm.expect(responseData).to.be.an('object');",
+									"    pm.expect(responseData.breeds).to.exist.and.to.be.an('array');",
+									"    pm.expect(responseData.breeds).to.have.lengthOf(parseInt(limit));",
+									"});",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
 					"id": "2a0be265-d9c8-409a-b6ef-612a70f75e14",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -79,7 +130,6 @@
 							"status": "OK",
 							"code": 200,
 							"_postman_previewlanguage": "json",
-							"_postman_previewtype": "html",
 							"header": [
 								{
 									"key": "Content-Type",
@@ -125,7 +175,6 @@
 							"status": "Internal Server Error",
 							"code": 500,
 							"_postman_previewlanguage": "json",
-							"_postman_previewtype": "html",
 							"header": [
 								{
 									"key": "Content-Type",
@@ -212,7 +261,6 @@
 							"status": "OK",
 							"code": 200,
 							"_postman_previewlanguage": "json",
-							"_postman_previewtype": "html",
 							"header": [
 								{
 									"key": "Content-Type",
@@ -254,7 +302,6 @@
 							"status": "Not Found",
 							"code": 404,
 							"_postman_previewlanguage": "text",
-							"_postman_previewtype": "html",
 							"header": [],
 							"cookie": []
 						},
@@ -294,7 +341,6 @@
 							"status": "Internal Server Error",
 							"code": 500,
 							"_postman_previewlanguage": "json",
-							"_postman_previewtype": "html",
 							"header": [
 								{
 									"key": "Content-Type",
@@ -391,7 +437,6 @@
 							"status": "OK",
 							"code": 200,
 							"_postman_previewlanguage": "json",
-							"_postman_previewtype": "html",
 							"header": [
 								{
 									"key": "Content-Type",
@@ -442,7 +487,6 @@
 							"status": "Internal Server Error",
 							"code": 500,
 							"_postman_previewlanguage": "json",
-							"_postman_previewtype": "html",
 							"header": [
 								{
 									"key": "Content-Type",
