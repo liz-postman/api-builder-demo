@@ -1,10 +1,10 @@
 {
 	"info": {
-		"_postman_id": "5f3d93fd-9d7d-48dc-b61f-fd44bb96d164",
+		"_postman_id": "56536c91-60ef-43f9-9a17-419e8581c1c2",
 		"name": "Cat Facts",
 		"description": "Contact Support:\n Name: Liz Fedak\n Email: admin@admin.com",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_uid": "34453735-5f3d93fd-9d7d-48dc-b61f-fd44bb96d164"
+		"_uid": "34453735-56536c91-60ef-43f9-9a17-419e8581c1c2"
 	},
 	"item": [
 		{
@@ -12,61 +12,7 @@
 			"item": [
 				{
 					"name": "Returns a list of breeds",
-					"event": [
-						{
-							"listen": "test",
-							"script": {
-								"id": "c651cce9-7aec-4282-9fca-2d040f2c228d",
-								"exec": [
-									"pm.test(\"Response status code is 200\", function () {",
-									"    pm.response.to.have.status(200);",
-									"});",
-									"pm.test(\"Response status code is 400\", function () {",
-									"    pm.response.to.have.status(400);",
-									"});",
-									"",
-									"",
-									"pm.test(\"Response time is in an acceptable range\", function () {",
-									"  pm.expect(pm.response.responseTime).to.be.below(1000);",
-									"});",
-									"",
-									"",
-									"pm.test(\"Response has the required fields based on the schema\", function () {",
-									"    const responseData = pm.response.json();",
-									"    ",
-									"    pm.expect(responseData).to.be.an('object');",
-									"    pm.expect(responseData).to.have.property('breeds').that.is.an('array');",
-									"    responseData.breeds.forEach(function(breed) {",
-									"        pm.expect(breed).to.have.property('name').that.is.a('string');",
-									"        pm.expect(breed).to.have.property('size').that.is.a('string');",
-									"        pm.expect(breed).to.have.property('origin').that.is.a('string');",
-									"        pm.expect(breed).to.have.property('temperament').that.is.a('string');",
-									"    });",
-									"});",
-									"",
-									"",
-									"pm.test(\"Limit query parameter format is valid\", function () {",
-									"  pm.expect(pm.request.url.query).to.include(\"limit\");",
-									"  pm.expect(pm.request.url.query.get(\"limit\")).to.match(/^\\d+$/);",
-									"});",
-									"",
-									"",
-									"pm.test(\"Validate the presence of 'breeds' array and its length based on the limit query parameter value\", function () {",
-									"    const limit = pm.request.url.query.get('limit');",
-									"    const responseData = pm.response.json();",
-									"    ",
-									"    pm.expect(responseData).to.be.an('object');",
-									"    pm.expect(responseData.breeds).to.exist.and.to.be.an('array');",
-									"    pm.expect(responseData.breeds).to.have.lengthOf(parseInt(limit));",
-									"});",
-									""
-								],
-								"type": "text/javascript",
-								"packages": {}
-							}
-						}
-					],
-					"id": "2a0be265-d9c8-409a-b6ef-612a70f75e14",
+					"id": "87f770ab-7cd5-465a-a3c3-83cedda7265d",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -79,17 +25,17 @@
 							}
 						],
 						"url": {
-							"raw": "{{baseUrl}}/breeds?limit=<long>",
+							"raw": "{{baseUrl}}/breeds?limit=10",
 							"host": [
 								"{{baseUrl}}"
 							],
 							"path": [
-								"breeeeeds"
+								"breeds"
 							],
 							"query": [
 								{
 									"key": "limit",
-									"value": "<long>",
+									"value": "10",
 									"description": "This is a description"
 								}
 							]
@@ -98,7 +44,7 @@
 					},
 					"response": [
 						{
-							"id": "ecbbc151-a53b-4acd-b8fd-f02668a87f8b",
+							"id": "b0aac567-8a19-4b29-90fb-951efd0f08ed",
 							"name": "Normal operation",
 							"originalRequest": {
 								"method": "GET",
@@ -114,7 +60,7 @@
 									}
 								],
 								"url": {
-									"raw": "{{baseUrl}}/breeds?limit=<long>",
+									"raw": "{{baseUrl}}/breeds?limit=10",
 									"host": [
 										"{{baseUrl}}"
 									],
@@ -125,7 +71,7 @@
 										{
 											"description": "This is a description",
 											"key": "limit",
-											"value": "<long>"
+											"value": "10"
 										}
 									]
 								}
@@ -140,10 +86,10 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\n\t\"breed\": \"<string>\",\n\t\"country\": \"<string>\",\n\t\"origin\": \"<string>\",\n\t\"coat\": \"<string>\",\n\t\"pattern\": \"<string>\"\n}"
+							"body": "success"
 						},
 						{
-							"id": "24b1fcf1-0f5f-4438-a98c-06b3d1032ec0",
+							"id": "960707c4-2837-4d1b-996a-c8ef25edc1a6",
 							"name": "Server exception",
 							"originalRequest": {
 								"method": "GET",
@@ -159,7 +105,7 @@
 									}
 								],
 								"url": {
-									"raw": "{{baseUrl}}/breeds?limit=<long>",
+									"raw": "{{baseUrl}}/breeds?limit=10",
 									"host": [
 										"{{baseUrl}}"
 									],
@@ -170,7 +116,7 @@
 										{
 											"description": "This is a description",
 											"key": "limit",
-											"value": "<long>"
+											"value": "10"
 										}
 									]
 								}
@@ -185,19 +131,19 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\n\t\"breed\": \"<string>\",\n\t\"country\": \"<string>\",\n\t\"origin\": \"<string>\",\n\t\"coat\": \"<string>\",\n\t\"pattern\": \"<string>\"\n}"
+							"body": "unsuccessful"
 						}
 					]
 				}
 			],
-			"id": "ac8c6c39-465b-45e7-8e11-5bd775487b22"
+			"id": "a26ddeaa-e2ec-40b8-aedd-34e1de612737"
 		},
 		{
 			"name": "fact",
 			"item": [
 				{
 					"name": "Returns a random fact",
-					"id": "5c860b35-7a37-4010-9b3a-9d8685e92d82",
+					"id": "d8e6f47a-eb81-4084-9f8b-f6f5bfa01231",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -210,7 +156,7 @@
 							}
 						],
 						"url": {
-							"raw": "{{baseUrl}}/fact?max_length=100",
+							"raw": "{{baseUrl}}/fact?max_length=success",
 							"host": [
 								"{{baseUrl}}"
 							],
@@ -220,7 +166,7 @@
 							"query": [
 								{
 									"key": "max_length",
-									"value": "100",
+									"value": "success",
 									"description": "maximum length of returned fact"
 								}
 							]
@@ -229,7 +175,7 @@
 					},
 					"response": [
 						{
-							"id": "949c8450-1254-4388-8493-4def7f04a006",
+							"id": "18f6773f-cc0d-4429-b3e4-c114cb1a3dc2",
 							"name": "Normal response",
 							"originalRequest": {
 								"method": "GET",
@@ -245,7 +191,7 @@
 									}
 								],
 								"url": {
-									"raw": "{{baseUrl}}/fact?max_length=100",
+									"raw": "{{baseUrl}}/fact?max_length=success",
 									"host": [
 										"{{baseUrl}}"
 									],
@@ -256,7 +202,7 @@
 										{
 											"description": "maximum length of returned fact",
 											"key": "max_length",
-											"value": "100"
+											"value": "success"
 										}
 									]
 								}
@@ -271,10 +217,10 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\n\t\"example\": {\n\t\t\"fact\": \"A cat's normal pulse is 140-240 beats per minute, with an average of 195.\"\n\t}\n}"
+							"body": "{\n  \"fact\": \"A cat's normal pulse is 140-240 beats per minute, with an average of 195.\"\n}"
 						},
 						{
-							"id": "f10cac60-952d-4688-83ca-35fed5e0abaf",
+							"id": "2787d844-b305-4c89-bec3-08d1a0fc883e",
 							"name": "Fact not found",
 							"originalRequest": {
 								"method": "GET",
@@ -286,7 +232,7 @@
 									}
 								],
 								"url": {
-									"raw": "{{baseUrl}}/fact?max_length=100",
+									"raw": "{{baseUrl}}/fact?max_length=success",
 									"host": [
 										"{{baseUrl}}"
 									],
@@ -297,7 +243,7 @@
 										{
 											"description": "maximum length of returned fact",
 											"key": "max_length",
-											"value": "100"
+											"value": "success"
 										}
 									]
 								}
@@ -309,7 +255,7 @@
 							"cookie": []
 						},
 						{
-							"id": "ec78898d-e3ae-4893-a7ef-40c573ecaf46",
+							"id": "8fb1d78f-a07f-48f3-97a9-edc40caa4c38",
 							"name": "Normal response",
 							"originalRequest": {
 								"method": "GET",
@@ -325,7 +271,7 @@
 									}
 								],
 								"url": {
-									"raw": "{{baseUrl}}/fact?max_length=100",
+									"raw": "{{baseUrl}}/fact?max_length=success",
 									"host": [
 										"{{baseUrl}}"
 									],
@@ -336,7 +282,7 @@
 										{
 											"description": "maximum length of returned fact",
 											"key": "max_length",
-											"value": "100"
+											"value": "success"
 										}
 									]
 								}
@@ -351,19 +297,19 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\n\t\"example\": \"unsuccess\"\n}"
+							"body": "unsuccess"
 						}
 					]
 				}
 			],
-			"id": "220d4278-8ad5-4bdd-82b3-287f0360cbe7"
+			"id": "a5f82cd4-cd66-4d54-b41b-b4545cb899c0"
 		},
 		{
 			"name": "facts",
 			"item": [
 				{
 					"name": "Get a list of facts",
-					"id": "1054820a-0096-43ec-8ee9-3aa90651c6ae",
+					"id": "f2e1a868-76a8-4447-9064-e408d15224b9",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -376,7 +322,7 @@
 							}
 						],
 						"url": {
-							"raw": "{{baseUrl}}/facts?max_length=<long>&limit=<long>",
+							"raw": "{{baseUrl}}/facts?max_length=success&limit=success",
 							"host": [
 								"{{baseUrl}}"
 							],
@@ -386,12 +332,12 @@
 							"query": [
 								{
 									"key": "max_length",
-									"value": "<long>",
+									"value": "success",
 									"description": "length"
 								},
 								{
 									"key": "limit",
-									"value": "<long>",
+									"value": "success",
 									"description": "limit the amount of results returned"
 								}
 							]
@@ -400,7 +346,7 @@
 					},
 					"response": [
 						{
-							"id": "0ceab37c-c96c-43b0-9a14-a169ef711d8f",
+							"id": "bb303d74-1af1-419b-b71a-eadc949d00b9",
 							"name": "successful operation",
 							"originalRequest": {
 								"method": "GET",
@@ -416,7 +362,7 @@
 									}
 								],
 								"url": {
-									"raw": "{{baseUrl}}/facts?max_length=<long>&limit=<long>",
+									"raw": "{{baseUrl}}/facts?max_length=success&limit=success",
 									"host": [
 										"{{baseUrl}}"
 									],
@@ -427,12 +373,12 @@
 										{
 											"description": "length",
 											"key": "max_length",
-											"value": "<long>"
+											"value": "success"
 										},
 										{
 											"description": "limit the amount of results returned",
 											"key": "limit",
-											"value": "<long>"
+											"value": "success"
 										}
 									]
 								}
@@ -447,10 +393,10 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\n\t\"fact\": \"<string>\",\n\t\"length\": \"<integer>\"\n}"
+							"body": "success"
 						},
 						{
-							"id": "4a787b40-a6b4-44ee-8c95-91faf1435825",
+							"id": "34bcc4b7-c084-4b60-816f-5995a3a8e8bb",
 							"name": "successful operation",
 							"originalRequest": {
 								"method": "GET",
@@ -466,7 +412,7 @@
 									}
 								],
 								"url": {
-									"raw": "{{baseUrl}}/facts?max_length=<long>&limit=<long>",
+									"raw": "{{baseUrl}}/facts?max_length=success&limit=success",
 									"host": [
 										"{{baseUrl}}"
 									],
@@ -477,12 +423,12 @@
 										{
 											"description": "length",
 											"key": "max_length",
-											"value": "<long>"
+											"value": "success"
 										},
 										{
 											"description": "limit the amount of results returned",
 											"key": "limit",
-											"value": "<long>"
+											"value": "success"
 										}
 									]
 								}
@@ -497,12 +443,12 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\n\t\"fact\": \"<string>\",\n\t\"length\": \"<integer>\"\n}"
+							"body": "unsuccess"
 						}
 					]
 				}
 			],
-			"id": "29e6803a-df64-4fe7-9828-75dd21ad7ee5"
+			"id": "c840be7d-72d5-43cd-a348-367f8b8685e6"
 		}
 	],
 	"auth": {
@@ -522,7 +468,7 @@
 	},
 	"variable": [
 		{
-			"id": "775543ba-c021-42d9-8db2-c957a3fa2347",
+			"id": "a52581fc-9691-4e89-82aa-cf7f6ce7dff4",
 			"key": "baseUrl",
 			"value": "https://catfact.ninja"
 		}
