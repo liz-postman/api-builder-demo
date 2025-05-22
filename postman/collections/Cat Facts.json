@@ -21,6 +21,9 @@
 									"pm.test(\"Response status code is 200\", function () {",
 									"    pm.response.to.have.status(200);",
 									"});",
+									"pm.test(\"Response status code is 400\", function () {",
+									"    pm.response.to.have.status(400);",
+									"});",
 									"",
 									"",
 									"pm.test(\"Response time is in an acceptable range\", function () {",
@@ -76,7 +79,7 @@
 							}
 						],
 						"url": {
-							"raw": "{{baseUrl}}/breeeeeds?limit=<long>",
+							"raw": "{{baseUrl}}/breeds?limit=<long>",
 							"host": [
 								"{{baseUrl}}"
 							],
